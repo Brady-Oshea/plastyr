@@ -15,3 +15,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/Lkknudse/plastyr
+BugReports: https://github.com/Lkknudse/plastyr/issues
