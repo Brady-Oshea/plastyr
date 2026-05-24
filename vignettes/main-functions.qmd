@@ -1,0 +1,53 @@
+---
+title: "main-functions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{main-functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(plastyr)
+```
+
+## Country Proportion Plastic Type Summary Statistics
+
+```{r}
+#| eval: false
+country_plastic_prop(plastic_data, country = "United States")
+```
+
+Will return the proportion of user specified (or default United States) country's 
+total plastic for each type.
+
+## Top n Countries Total Plastic Plot
+
+```{r}
+#| eval: false
+plot_plastic_by_country(plastic_data, top_n = 10)
+```
+
+Creates a bar chart of the top n (specified by user input default 10) countries,
+in descending order. The y axis representing total plastic pollution, x axis representing
+the countries.
+
+## Top n Polluters of Plastic Type
+
+```{r}
+#| eval: false
+top_polluters(plastic_data, n = 5, plastic_type = "pet")
+```
+
+Returns a data frame of the top n (default 5) countries polluting the user 
+specified plastic type (default "PET") in descending order. One column for the country
+and one for the count of the user specified plastic type.
+
+
