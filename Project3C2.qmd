@@ -1,0 +1,20 @@
+---
+title: "Checkpoint 2"
+author: "Alex Pyatigorsky"
+format: html
+editor: visual
+---
+
+```{r}
+install.packages(c("devtools", "usethis", "roxygen2", "testthat", "readr", "dplyr", "ggplot2", "forcats"))
+```
+
+```{r}
+usethis::use_r("load-data")
+usethis::use_r("country-plastic-prop")
+usethis::use_r("plot-plastic-by-country")
+usethis::use_test("load-data")
+usethis::use_test("country-plastic-prop")
+usethis::use_test("plot-plastic-by-country")
+```
+

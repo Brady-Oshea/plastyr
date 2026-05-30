@@ -9,12 +9,14 @@ Description: This package is built to make working with global plastics data mor
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
 Imports: 
     readr
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 URL: https://github.com/Lkknudse/plastyr
 BugReports: https://github.com/Lkknudse/plastyr/issues
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.0.0
