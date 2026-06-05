@@ -1,8 +1,8 @@
 ---
-title: "main-functions"
+title: "Introduction to plastyr"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{main-functions}
+  %\VignetteIndexEntry{Introduction to plastyr}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -14,40 +14,62 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+## Load Data
+
+First, load the dataset bundled with the package:
+
+```{r}
 library(plastyr)
+plastic <- load_data()
 ```
 
-## Country Proportion Plastic Type Summary Statistics
+## Clean Data
+
+Remove invalid rows and standardize country names:
 
 ```{r}
-#| eval: false
-country_plastic_prop(plastic_data, country = "United States")
+clean <- clean_plastics(plastic)
 ```
 
-Will return the proportion of user specified (or default United States) country's 
-total plastic for each type.
+## Country Plastic Type Proportions
 
-## Top n Countries Total Plastic Plot
+Get the proportion of each plastic type for a specific country:
 
 ```{r}
-#| eval: false
-plot_plastic_by_country(plastic_data, top_n = 10)
+country_plastic_prop(plastic, country_name = "China")
 ```
 
-Creates a bar chart of the top n (specified by user input default 10) countries,
-in descending order. The y axis representing total plastic pollution, x axis representing
-the countries.
+## Top Polluting Countries
 
-## Top n Polluters of Plastic Type
+Return the top N countries by total plastic collected:
 
 ```{r}
-#| eval: false
-top_polluters(plastic_data, n = 5, plastic_type = "pet")
+top_polluters(plastic, n = 5)
 ```
 
-Returns a data frame of the top n (default 5) countries polluting the user 
-specified plastic type (default "PET") in descending order. One column for the country
-and one for the count of the user specified plastic type.
+## Plot Plastic by Country
+
+Bar chart of the top N countries by total plastic:
+
+```{r}
+plot_plastic_by_country(plastic, top_n = 10)
+```
+
+## Plot Top Polluters
+
+Alternative bar chart visualization of top polluters:
+
+```{r}
+plot_top_polluters(plastic, n = 10)
+```
+
+## Linear Model of Plastic Over Time
+
+Fit a simple linear regression of total plastic collected vs. year 
+for a given country:
+
+```{r}
+plastic_lm(plastic, country_name = "China")
+```
 
 

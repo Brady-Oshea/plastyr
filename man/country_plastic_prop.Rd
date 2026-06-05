@@ -4,12 +4,12 @@
 \alias{country_plastic_prop}
 \title{Summarize plastic type proportions for a country}
 \usage{
-country_plastic_prop(dat, country = "United States of America")
+country_plastic_prop(dat, country_name = "United States of America")
 }
 \arguments{
 \item{dat}{A data frame returned by \code{load_data()}}
 
-\item{country}{A string specifying the country name. Defaults to "United States".}
+\item{country_name}{A string specifying the country name. Defaults to "United States".}
 }
 \value{
 A tibble with columns for each plastic type and their proportions

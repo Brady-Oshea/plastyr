@@ -10,7 +10,14 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 Imports: 
-    readr
+    dplyr,
+    ggplot2,
+    data.table,
+    stringr,
+    forcats,
+    broom,
+    tibble,
+    stats
 Suggests: 
     knitr,
     rmarkdown,

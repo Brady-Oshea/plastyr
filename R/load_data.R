@@ -6,7 +6,10 @@
 #' @examples
 #' plastic <- load_data()
 
-load_data <- function(){
-  readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-01-26/plastics.csv')
-
+load_data <- function() {
+  path <- system.file("extdata", "plastics.csv", package = "plastyr")
+  if (path == "") {
+    stop("Data file not found. Make sure plastyr is installed correctly.")
+  }
+  tibble::as_tibble(data.table::fread(path))
 }

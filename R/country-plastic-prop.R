@@ -4,16 +4,16 @@
 #' for a given country, averaged across all years.
 #'
 #' @param dat A data frame returned by \code{load_data()}
-#' @param country A string specifying the country name. Defaults to "United States".
+#' @param country_name A string specifying the country name. Defaults to "United States".
 #'
 #' @return A tibble with columns for each plastic type and their proportions
 #' @export
-country_plastic_prop <- function(dat, country = "United States of America") {
+country_plastic_prop <- function(dat, country_name = "United States of America") {
 
-  validate_country(dat, country)
+  validate_country(dat, country_name)
 
   dat |>
-    dplyr::filter(.data[["country"]] == country,
+    dplyr::filter(.data[["country"]] == country_name,
                   !is.na(grand_total),
                   grand_total > 0) |>
     dplyr::summarize(
