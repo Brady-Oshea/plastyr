@@ -2,7 +2,7 @@ Package: plastyr
 Title: Plastic R
 Version: 0.0.0.9000
 Authors@R: 
-    person("Leo", "Knudsen", , "lkknudse@calpoly.edu", role = c("aut", "cre"))
+    person("Brady", "O'Shea", , "bjoshea@calpoly.edu", role = c("aut", "cre"))
 Description: This package is built to make working with global plastics data more efficient
   and streamlined. Includes functions intended to make visualizing and summarizing 
   the data set easier.
@@ -15,7 +15,6 @@ Imports:
     data.table,
     stringr,
     forcats,
-    broom,
     tibble,
     stats,
     tidyr

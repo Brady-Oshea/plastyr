@@ -17,7 +17,7 @@ clean_plastics <- function(dat) {
       !is.na(country),
       country != "EMPTY",
       !is.na(grand_total),
-      grand_total > 0
+      grand_total > 0, parent_company != "Grand Total"
     ) |>
     dplyr::mutate(
       country = stringr::str_trim(country),
