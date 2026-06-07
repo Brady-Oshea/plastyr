@@ -17,7 +17,8 @@ Imports:
     forcats,
     broom,
     tibble,
-    stats
+    stats,
+    tidyr
 Suggests: 
     knitr,
     rmarkdown,

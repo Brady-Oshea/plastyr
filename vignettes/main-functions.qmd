@@ -16,8 +16,6 @@ knitr::opts_chunk$set(
 
 ## Load Data
 
-First, load the dataset bundled with the package:
-
 ```{r}
 library(plastyr)
 plastic <- load_data()
@@ -25,15 +23,11 @@ plastic <- load_data()
 
 ## Clean Data
 
-Remove invalid rows and standardize country names:
-
 ```{r}
 clean <- clean_plastics(plastic)
 ```
 
 ## Country Plastic Type Proportions
-
-Get the proportion of each plastic type for a specific country:
 
 ```{r}
 country_plastic_prop(plastic, country_name = "China")
@@ -41,32 +35,23 @@ country_plastic_prop(plastic, country_name = "China")
 
 ## Top Polluting Countries
 
-Return the top N countries by total plastic collected:
-
 ```{r}
 top_polluters(plastic, n = 5)
 ```
 
 ## Plot Plastic by Country
 
-Bar chart of the top N countries by total plastic:
-
 ```{r}
 plot_plastic_by_country(plastic, top_n = 10)
 ```
 
-## Plot Top Polluters
-
-Alternative bar chart visualization of top polluters:
+## Plot Plastic Types by Country
 
 ```{r}
-plot_top_polluters(plastic, n = 10)
+plot_plastic_types(plastic, country_name = "China")
 ```
 
 ## Linear Model of Plastic Over Time
-
-Fit a simple linear regression of total plastic collected vs. year 
-for a given country:
 
 ```{r}
 plastic_lm(plastic, country_name = "China")
