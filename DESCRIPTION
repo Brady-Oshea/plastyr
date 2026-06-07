@@ -23,7 +23,7 @@ Suggests:
     rmarkdown,
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
-URL: https://github.com/Lkknudse/plastyr
-BugReports: https://github.com/Lkknudse/plastyr/issues
+URL: https://github.com/Brady-Oshea/plastyr
+BugReports: https://github.com/Brady-Oshea/plastyr/issues
 Config/testthat/edition: 3
 Config/roxygen2/version: 8.0.0

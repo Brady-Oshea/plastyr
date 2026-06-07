@@ -51,10 +51,10 @@ plot_plastic_by_country(plastic, top_n = 10)
 plot_plastic_types(plastic, country_name = "China")
 ```
 
-## Linear Model of Plastic Over Time
+## Paired T-Test for Change in Plastic Totals Between Years
 
 ```{r}
-plastic_lm(plastic, country_name = "China")
+plastic_year_change_test(plastic)
 ```
 
 
